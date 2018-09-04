@@ -50,7 +50,7 @@ jacocoTestReport {
     afterEvaluate {
         classDirectories = files(classDirectories.files.collect {
             fileTree(dir: it,
-                includes: ['com/andreitop/newco/controller/**'])
+                includes: ['com/andreitop/newco/controller/**', 'com/andreitop/newco/service/**'])
         })
     }
 }

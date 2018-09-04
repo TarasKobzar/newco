@@ -1,17 +1,17 @@
-package com.andreitop.newco.service;
+package com.andreitop.newco.controller;
 
 import com.andreitop.newco.dto.TripDto;
-import com.andreitop.newco.repository.TripRepository;
 
 import java.io.Serializable;
 import java.util.List;
 
-public interface TripService<T extends TripDto, K extends Serializable> {
+public interface AbstractController<T extends TripDto, K extends Serializable> {
+
     List<T> findAll();
 
     T findById(K id);
 
-    void save(T trip);
+    void create(T trip);
 
     void delete(K id);
 
