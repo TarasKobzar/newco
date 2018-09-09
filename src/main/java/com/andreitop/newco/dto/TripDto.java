@@ -13,7 +13,7 @@ public class TripDto implements Serializable {
 
     private Long id;
     @NotNull
-    @Pattern(regexp = "/^[A-Z]{3}$/", message = "IATA airport code should be right format")
+    @Pattern(regexp = "^[A-Z]{3}$", message = "IATA airport code should be right format")
     private String origin;
     @Size(min = 3, max = 3)
     private String destination;
